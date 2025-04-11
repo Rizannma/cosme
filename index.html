@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosme - Effortless Radiance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <h1>COSME</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#makeup-products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <h3>Total: <span>$0.00</span></h3>
+                </div>
+                <button class="btn primary checkout-btn">Checkout</button>
+                <button class="btn secondary clear-cart-btn">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Radiance</h1>
+                <h2 class="fade-in">Unveil the glow within. </h2>
+                <p class="fade-in">Discover timeless beauty with formulas crafted to enhance and celebrate your unique charm where elegance meets innovation.</p>
+                <div class="cta-buttons fade-in">
+                    <a href="#makeup-products" class="btn primary">Browse Now</a>
+                    <a href="#about" class="btn secondary">Know More</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="images/3D img.jpg" alt="Cosme 3D">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <img src="images/building.jpg" alt="Our Store">
+                </div>
+                <div class="about-text">
+                    <h3 class="slide-in">Premium Makeup Experience</h3>
+                    <p class="slide-in">At Cosme, we're passionate about providing you with the finest cosmetics and exceptional service. As a trusted beauty retailer, we ensure that you get high-quality makeup products that enhance your natural beauty.</p>
+                    <p class="slide-in">Founded in 2018, we've quickly become the go-to destination for premium cosmetics. Our team of beauty experts is always ready to help you find the perfect products that match your style and personality.</p>
+                    <p class="slide-in">We believe in creating a seamless shopping experience, whether you visit our physical stores or shop online. Our commitment to excellence is reflected in everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Makeup Products Section -->
+<section id="makeup-products" class="makeup-products">
+    <div class="container">
+        <h2 class="section-title">Our Makeup Products</h2>
+        <div class="product-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="face">Face Products</button>
+            <button class="filter-btn" data-filter="eyes">Eye Products</button>
+            <button class="filter-btn" data-filter="lips">Lip Products</button>
+        </div>
+        <div class="product-grid">
+            <!-- Concealer -->
+            <div class="product-card fade-in" data-category="face">
+                <div class="product-image">
+                    <img src="images/concealer.jpg" alt="Concealer">
+                </div>
+                <div class="product-info">
+                    <h3>Concealer</h3>
+                    <p class="product-description">Full coverage to hide blemishes and eyebags.</p>
+                    <p class="product-price">₱329</p>
+                    <button class="btn add-to-cart" data-id="1" data-name="Concealer" data-price="329" data-image="images/concealer.jpg">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Mascara -->
+            <div class="product-card fade-in" data-category="eyes">
+                <div class="product-image">
+                    <img src="images/mascara.jpg" alt="Mascara">
+                </div>
+                <div class="product-info">
+                    <h3>Mascara</h3>
+                    <p class="product-description">Enhances lashes for a voluminous look.</p>
+                    <p class="product-price">₱459</p>
+                    <button class="btn add-to-cart" data-id="2" data-name="Mascara" data-price="459" data-image="images/mascara.jpg">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Lip Gloss -->
+            <div class="product-card fade-in" data-category="lips">
+                <div class="product-image">
+                    <img src="images/lipgloss.jpg" alt="Lip Gloss">
+                </div>
+                <div class="product-info">
+                    <h3>Lip Gloss</h3>
+                    <p class="product-description">Adding a shine and hydration to your lips.</p>
+                    <p class="product-price">₱309</p>
+                    <button class="btn add-to-cart" data-id="3" data-name="Lip Gloss" data-price="309" data-image="images/lipgloss.jpg">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Foundation -->
+            <div class="product-card fade-in" data-category="face">
+                <div class="product-image">
+                    <img src="images/foundation.jpg" alt="Foundation">
+                </div>
+                <div class="product-info">
+                    <h3>Foundation</h3>
+                    <p class="product-description">Provides a flawless base and even skin tone.</p>
+                    <p class="product-price">₱549</p>
+                    <button class="btn add-to-cart" data-id="4" data-name="Foundation" data-price="549" data-image="images/foundation.jpg">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Blush On -->
+            <div class="product-card fade-in" data-category="face">
+                <div class="product-image">
+                    <img src="images/blush.jpg" alt="Blush On">
+                </div>
+                <div class="product-info">
+                    <h3>Blush On</h3>
+                    <p class="product-description">Gives a natural flush to the cheeks.</p>
+                    <p class="product-price">₱499</p>
+                    <button class="btn add-to-cart" data-id="5" data-name="Blush On" data-price="499" data-image="images/blush.jpg">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Eye Shadow -->
+            <div class="product-card fade-in" data-category="eyes">
+                <div class="product-image">
+                    <img src="images/eyeshadow.jpg" alt="Eye Shadow">
+                </div>
+                <div class="product-info">
+                    <h3>Eye Shadow</h3>
+                    <p class="product-description"> A pigmented color to pop up your eye.</p>
+                    <p class="product-price">₱399</p>
+                    <button class="btn add-to-cart" data-id="6" data-name="Eye Shadow" data-price="399" data-image="images/eyeshadow.jpg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info slide-in">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>456 Beauty Lane, Glamour City</p>
+                            <p>Philippines, 4033</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+63 932 898 397</p>
+                            <p>Monday - Friday: 9am - 5pm</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>cosme.ph@gmail.com</p>
+                            <p>cosme.ph@yahoo.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form slide-in">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Cosme</h2>
+                <p>Premium Makeup Experience</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Shop & Discover</h4>
+                    <ul>
+                        <li><a href="#makeup-products">Makeup</a></li>
+                        <li><a href="#makeup-products">Skincare</a></li>
+                        <li><a href="#makeup-products">Accessories</a></li>
+                        <li><a href="#makeup-products">Gift Sets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Cosme Store</h4>
+                    <ul>
+                        <li><a href="#contact">Find a Store</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#contact">Order Status</a></li>
+                        <li><a href="#contact">Membership</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Cosme</h4>
+                    <ul>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#about">Careers</a></li>
+                        <li><a href="#about">Events</a></li>
+                        <li><a href="#about">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cosme. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Notification -->
+    <div class="notification">
+        <p>Item added to cart!</p>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a, .cta-buttons a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+    
+                // Close mobile menu if open
+                document.querySelector('.nav-links').classList.remove('show');
+                
+                // Update active nav link
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    
+        // Product filtering
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Filter products
+                document.querySelectorAll('.product-card').forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    
+        // Implement scroll animations
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.fade-in, .slide-in');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        }
+    
+        // Initial check for elements in view
+        revealOnScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', revealOnScroll);
+    
+        // Shopping Cart Functionality
+        class ShoppingCart {
+            constructor() {
+                this.cart = [];
+                this.total = 0;
+                this.cartCount = document.querySelector('.cart-count');
+                this.cartItems = document.querySelector('.cart-items');
+                this.cartTotal = document.querySelector('.cart-total span');
+                this.cartIcon = document.querySelector('.cart-icon');
+                this.cartOverlay = document.querySelector('.cart-overlay');
+                this.closeCartBtn = document.querySelector('.close-cart');
+                this.clearCartBtn = document.querySelector('.clear-cart-btn');
+                this.checkoutBtn = document.querySelector('.checkout-btn');
+                this.notification = document.querySelector('.notification');
+                
+                // Load cart from localStorage if exists
+                this.loadCart();
+                
+                // Setup event listeners
+                this.setupEventListeners();
+            }
+            
+            setupEventListeners() {
+                // Add to cart buttons
+                document.querySelectorAll('.add-to-cart').forEach(button => {
+                    button.addEventListener('click', e => {
+                        this.addToCart(e.target);
+                    });
+                });
+                
+                // Open cart
+                this.cartIcon.addEventListener('click', () => {
+                    this.openCart();
+                });
+                
+                // Close cart
+                this.closeCartBtn.addEventListener('click', () => {
+                    this.closeCart();
+                });
+                
+                // Clear cart
+                this.clearCartBtn.addEventListener('click', () => {
+                    this.clearCart();
+                });
+                
+                // Checkout
+                this.checkoutBtn.addEventListener('click', () => {
+                    if (this.cart.length > 0) {
+                        alert('Thank you for your purchase! Your order is being processed.');
+                        this.clearCart();
+                        this.closeCart();
+                    } else {
+                        alert('Your cart is empty. Add some products first!');
+                    }
+                });
+            }
+            
+            addToCart(button) {
+                const id = button.getAttribute('data-id');
+                const name = button.getAttribute('data-name');
+                const price = parseFloat(button.getAttribute('data-price'));
+                const image = button.getAttribute('data-image');
+                
+                // Check if product already in cart
+                const existingItem = this.cart.find(item => item.id === id);
+                
+                if (existingItem) {
+                    existingItem.quantity++;
+                } else {
+                    this.cart.push({
+                        id,
+                        name,
+                        price,
+                        image,
+                        quantity: 1
+                    });
+                }
+                
+                // Update cart
+                this.updateCart();
+                
+                // Show notification
+                this.showNotification();
+                
+                // Save to localStorage
+                this.saveCart();
+            }
+            
+            updateCart() {
+                // Update cart count
+                this.cartCount.textContent = this.cart.reduce((total, item) => total + item.quantity, 0);
+                
+                // Update total
+                this.total = this.cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+                this.cartTotal.textContent = `₱${this.total.toFixed(2)}`; // Changed to peso symbol
+                
+                // Update cart items
+                this.cartItems.innerHTML = '';
+                
+                this.cart.forEach(item => {
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'cart-item';
+                    
+                    cartItem.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-details">
+                            <h4>${item.name}</h4>
+                            <p>₱${item.price.toFixed(2)} x ${item.quantity}</p> <!-- Changed to peso symbol -->
+                        </div>
+                        <div class="cart-item-controller">
+                            <button class="quantity-btn decrease" data-id="${item.id}">-</button>
+                            <span>${item.quantity}</span>
+                            <button class="quantity-btn increase" data-id="${item.id}">+</button>
+                            <button class="remove-btn" data-id="${item.id}">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    `;
+                    
+                    this.cartItems.appendChild(cartItem);
+                });
+                
+                // Add event listeners to new buttons
+                document.querySelectorAll('.quantity-btn.increase').forEach(button => {
+                    button.addEventListener('click', e => {
+                        const id = e.target.getAttribute('data-id');
+                        this.increaseQuantity(id);
+                    });
+                });
+                
+                document.querySelectorAll('.quantity-btn.decrease').forEach(button => {
+                    button.addEventListener('click', e => {
+                        const id = e.target.getAttribute('data-id');
+                        this.decreaseQuantity(id);
+                    });
+                });
+                
+                document.querySelectorAll('.remove-btn').forEach(button => {
+                    button.addEventListener('click', e => {
+                        const id = e.target.closest('.remove-btn').getAttribute('data-id');
+                        this.removeItem(id);
+                    });
+                });
+            }
+            
+            increaseQuantity(id) {
+                const item = this.cart.find(item => item.id === id);
+                if (item) {
+                    item.quantity++;
+                    this.updateCart();
+                    this.saveCart();
+                }
+            }
+            
+            decreaseQuantity(id) {
+                const item = this.cart.find(item => item.id === id);
+                if (item) {
+                    item.quantity--;
+                    if (item.quantity <= 0) {
+                        this.removeItem(id);
+                    } else {
+                        this.updateCart();
+                        this.saveCart();
+                    }
+                }
+            }
+            
+            removeItem(id) {
+                this.cart = this.cart.filter(item => item.id !== id);
+                this.updateCart();
+                this.saveCart();
+            }
+            
+            openCart() {
+                this.cartOverlay.classList.add('show');
+            }
+            
+            closeCart() {
+                this.cartOverlay.classList.remove('show');
+            }
+            
+            clearCart() {
+                if (this.cart.length === 0) {
+                    alert('The cart is already empty.');
+                } else {
+                    this.cart = [];
+                    this.updateCart();
+                    this.saveCart();
+                }
+            }
+            
+            saveCart() {
+                localStorage.setItem('cart', JSON.stringify(this.cart));
+            }
+            
+            loadCart() {
+                const savedCart = localStorage.getItem('cart');
+                if (savedCart) {
+                    this.cart = JSON.parse(savedCart);
+                    this.updateCart();
+                }
+            }
+            
+            showNotification() {
+                this.notification.classList.add('show');
+                setTimeout(() => {
+                    this.notification.classList.remove('show');
+                }, 2000);
+            }
+        }
+        
+        // Initialize cart
+        const cart = new ShoppingCart();
+    </script>
+    
+    
+    
+    
+</body>
+</html>
