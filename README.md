@@ -43,3 +43,12 @@ At the bottom of the site is the **Footer**, which includes extra links and sect
 
 ---
 At Cosme, we aim to make beauty accessible, elegant, and innovative for everyone. Whether you're here to learn about us, browse your favorite makeup products, or get in touch, our website is designed to offer you a smooth and enjoyable experience.
+
+![image](https://github.com/user-attachments/assets/86014e96-a848-4e51-986b-e50ce1be063b)
+![image](https://github.com/user-attachments/assets/c24bbbb1-295c-4465-bceb-e030330250b5)
+![image](https://github.com/user-attachments/assets/6850c372-0ee4-4d82-a092-40d7200c9c74)
+![image](https://github.com/user-attachments/assets/3ea22074-72b1-4582-9ef3-daa8d7da0918)
+![image](https://github.com/user-attachments/assets/e78e2b9b-d0b8-45c3-9972-771775d09419)
+![image](https://github.com/user-attachments/assets/3ae2f8d6-d335-4281-b14a-25dbd91481f6)
+
+
